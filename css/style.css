@@ -1,0 +1,51 @@
+.desk {
+  height: 100vh;
+  width: 100vw;
+  position: relative; }
+  .desk:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/desk.jpg") no-repeat bottom;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1; }
+
+svg {
+  fill: #828993; }
+  svg path {
+    stroke: #828993; }
+
+.computer {
+  position: absolute;
+  bottom: 20vh;
+  left: 35vw;
+  height: 40vh; }
+  .computer .monitor, .computer .dashes {
+    display: none; }
+  .computer .button {
+    opacity: 0; }
+  .computer .monitorFilled {
+    opacity: 0;
+    fill-opacity: 1;
+    stroke-width: 0.26122364; }
+    .computer .monitorFilled :nth-child(2) {
+      fill: #cccdd1; }
+
+.phone {
+  display: none;
+  position: absolute;
+  bottom: 25vh;
+  left: 70vw;
+  height: 15vh; }
+
+.curriculum {
+  display: none;
+  position: absolute;
+  bottom: 70vh;
+  left: 80vw;
+  height: 20vh;
+  fill: #aa9169; }
