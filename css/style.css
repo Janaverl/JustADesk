@@ -1,3 +1,8 @@
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden; }
+
 .desk {
   height: 100vh;
   width: 100vw;
@@ -36,7 +41,6 @@ svg {
       fill: #cccdd1; }
 
 .phone {
-  display: none;
   position: absolute;
   bottom: 25vh;
   left: 70vw;
@@ -46,6 +50,8 @@ svg {
   display: none;
   position: absolute;
   bottom: 70vh;
-  left: 80vw;
+  right: 10vw;
   height: 20vh;
   fill: #aa9169; }
+
+/*# sourceMappingURL=style.css.map */
