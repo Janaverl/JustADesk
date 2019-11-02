@@ -1,5 +1,3 @@
-console.log("ik werk");
-
 $(document).ready(function(){
 
     class Path {
@@ -27,16 +25,6 @@ $(document).ready(function(){
     monitor.changeCss();
     let dashes = new Path("dashes");
     dashes.changeCss();
-    // let curriculumOne = new Path("curriculumOne");
-    // curriculumOne.changeCss();
-    // let curriculumTwo = new Path("curriculumTwo");
-    // curriculumTwo.changeCss();
-    // let curriculumThree = new Path("curriculumThree");
-    // curriculumThree.changeCss();    
-    // let curriculumFour = new Path("curriculumFour");
-    // curriculumFour.changeCss();
-    // let curriculumFive = new Path("curriculumFive");
-    // curriculumFive.changeCss();
 
     // var tl2 = new TimelineMax();
 
