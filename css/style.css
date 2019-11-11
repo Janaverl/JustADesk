@@ -3,10 +3,36 @@ body {
   max-width: 100vw;
   overflow: hidden; }
 
+.portrait {
+  display: none; }
+  @media (orientation: portrait) {
+    .portrait {
+      position: relative;
+      display: initial; }
+      .portrait > div {
+        height: 100vh;
+        width: 100vw;
+        background-color: grey;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+        .portrait > div p {
+          margin: 0;
+          font-weight: bold; } }
+
 .desk {
   height: 100vh;
   width: 100vw;
   position: relative; }
+  @media (orientation: portrait) {
+    .desk {
+      display: none; } }
   .desk:after {
     content: "";
     position: absolute;

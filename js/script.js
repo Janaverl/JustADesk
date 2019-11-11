@@ -21,39 +21,42 @@ $(document).ready(function(){
             $("."+this.classname).css("display", "inline");
         }
     }
-            
-    // Usage:
-    let monitor = new Path("monitor");
-    monitor.changeCss();
-    let dashes = new Path("dashes");
-    dashes.changeCss();
 
-    // var tl2 = new TimelineMax();
+    function drawing(){
+        // Usage:
+        let monitor = new Path("monitor");
+        monitor.changeCss();
+        let dashes = new Path("dashes");
+        dashes.changeCss();
 
-    // $(".phone").css("display", "inline");
-    $(".curriculum").css("display", "inline");
+        // var tl2 = new TimelineMax();
 
+        // $(".phone").css("display", "inline");
+        $(".curriculum").css("display", "inline");
 
-    var tl = new TimelineMax();
+        var tl = new TimelineMax();
 
-    tl.to('.monitor path', 4, {strokeDashoffset: 0})
+        tl.to('.monitor path', 4, {strokeDashoffset: 0})
+    
+        .to('.dashes path', 1, {strokeDashoffset: 0}, "-=3")
+        .to('.computer path', 2, {fillOpacity: 1, ease: Power3.easeIn})
+    
+        .to('.monitorFilled', 1, {opacity: 1, ease: Power2.easeIn})
+    
+        .from('.phone', 1, {scale: 0.5, left: "100vw", ease: Power1.easeIn, y:-500, rotation: -70})
+        .from('.curriculum', 1, {scale: 0, rotation: -70})
+    
+        .to('.button', 1, {opacity: 1, ease: Bounce.easeIn, repeat:-1});
+    }
 
-    .to('.dashes path', 1, {strokeDashoffset: 0}, "-=3")
-    .to('.computer path', 2, {fillOpacity: 1, ease: Power3.easeIn})
+    drawing();
 
-    .to('.monitorFilled', 1, {opacity: 1, ease: Power2.easeIn})
+    $( window ).resize(function(){
+        console.log("resize");
+        var tl = new TimelineMax();
+            tl.to('.computer', 1, {bottom: "20vh", left: "35vw", height: "40vh"})
+            .to('.phone', 1, {bottom: "25vh", left: "70vw", height: "15vh"})
+            .to('.curriculum', 1, {bottom: "70vh", right: "10vw", height: "20vh"});
+    });
 
-    .from('.phone', 1, {scale: 0.5, left: "100vw", ease: Power1.easeIn, y:-500, rotation: -70})
-    .from('.curriculum', 1, {scale: 0, rotation: -70})
-
-    .to('.button', 1, {opacity: 1, ease: Bounce.easeIn, repeat:-1});
-
-});
-
-$( window ).resize(function(){
-    console.log("resize");
-    var tl = new TimelineMax();
-        tl.to('.computer', 1, {bottom: "20vh", left: "35vw", height: "40vh"})
-        .to('.phone', 1, {bottom: "25vh", left: "70vw", height: "15vh"})
-        .to('.curriculum', 1, {bottom: "70vh", right: "10vw", height: "20vh"});
 });
