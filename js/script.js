@@ -51,12 +51,6 @@ $(document).ready(function(){
 
     drawing();
 
-    $( window ).resize(function(){
-        console.log("resize");
-        var tl = new TimelineMax();
-            tl.to('.computer', 1, {bottom: "20vh", left: "35vw", height: "40vh"})
-            .to('.phone', 1, {bottom: "25vh", left: "70vw", height: "15vh"})
-            .to('.curriculum', 1, {bottom: "70vh", right: "10vw", height: "20vh"});
-    });
+    $(window).resize(function(){location.reload();});
 
 });
