@@ -17,9 +17,15 @@ body{
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             p{
                 margin: 0;
                 font-weight: bold;
+            }
+            svg{
+                width: 50%;
+                fill: white;
+                stroke: white;
             }
         }
     }

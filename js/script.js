@@ -2,6 +2,12 @@ console.log("yep");
 
 $(document).ready(function(){
 
+    function flip(){
+        var tl = new TimelineMax();
+        tl.from('.cellphone', 2, {rotation: -90});
+    }
+
+
     class Path {
 
         constructor(classname) {
@@ -50,6 +56,7 @@ $(document).ready(function(){
     }
 
     drawing();
+    flip();
 
     $(window).resize(function(){location.reload();});
 

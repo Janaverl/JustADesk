@@ -21,10 +21,18 @@ body {
         align-items: center;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
         .portrait > div p {
           margin: 0;
-          font-weight: bold; } }
+          font-weight: bold; }
+        .portrait > div svg {
+          width: 50%;
+          fill: white;
+          stroke: white; } }
 
 .desk {
   height: 100vh;
