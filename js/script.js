@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     function flip(){
         var tl = new TimelineMax();
-        tl.from('.cellphone', 2, {rotation: -90});
+        tl.from('.cellphone', 2, {rotation: -45})
     }
 
 
